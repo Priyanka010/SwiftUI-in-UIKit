@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdV-LD-vWi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TOP 10 Highest Mountains in the world-->
+        <scene sceneID="8DD-Rs-z27">
+            <objects>
+                <tableViewController id="ENx-lQ-gaV" customClass="MountainListsViewController" customModule="Using_Both" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qd9-3O-Ily">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MountainListCell" rowHeight="398" id="5qW-kT-xg8" customClass="MountainListCell" customModule="Using_Both" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="398"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5qW-kT-xg8" id="Ag2-Dv-vr8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zgm-eb-H8s">
+                                            <rect key="frame" x="20" y="53" width="374" height="334"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="zgm-eb-H8s" secondAttribute="height" constant="40" id="8Ww-3U-vP0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ziw-1N-GHw">
+                                            <rect key="frame" x="20" y="11" width="374" height="41"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zgm-eb-H8s" secondAttribute="trailing" id="7Fh-O1-lS6"/>
+                                        <constraint firstItem="Ziw-1N-GHw" firstAttribute="top" secondItem="Ag2-Dv-vr8" secondAttribute="topMargin" id="Adu-ML-nJx"/>
+                                        <constraint firstItem="zgm-eb-H8s" firstAttribute="top" secondItem="Ziw-1N-GHw" secondAttribute="bottom" constant="1" id="MQh-AQ-zRQ"/>
+                                        <constraint firstItem="zgm-eb-H8s" firstAttribute="leading" secondItem="Ag2-Dv-vr8" secondAttribute="leadingMargin" id="Ryh-cR-V7A"/>
+                                        <constraint firstItem="Ziw-1N-GHw" firstAttribute="trailing" secondItem="zgm-eb-H8s" secondAttribute="trailing" id="gOD-Lq-COW"/>
+                                        <constraint firstItem="Ziw-1N-GHw" firstAttribute="leading" secondItem="zgm-eb-H8s" secondAttribute="leading" id="r4e-V0-I14"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zgm-eb-H8s" secondAttribute="bottom" id="tt0-oc-wxO"/>
+                                        <constraint firstItem="zgm-eb-H8s" firstAttribute="top" secondItem="Ag2-Dv-vr8" secondAttribute="topMargin" constant="42" id="wNu-I0-5SL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="MountainListImageView" destination="zgm-eb-H8s" id="pp7-w1-66H"/>
+                                    <outlet property="MountainListLabel" destination="Ziw-1N-GHw" id="iAV-Qy-oJi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ENx-lQ-gaV" id="jXT-So-O4N"/>
+                            <outlet property="delegate" destination="ENx-lQ-gaV" id="qeo-NF-hLs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TOP 10 Highest Mountains in the world" largeTitleDisplayMode="never" id="PwA-dV-dai"/>
+                    <connections>
+                        <segue destination="2V8-S6-eOW" kind="show" identifier="segue" id="34m-tC-WOh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDi-Ms-8Cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017.3913043478261" y="151.33928571428569"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="I7U-C7-xfO">
+            <objects>
+                <viewController id="2V8-S6-eOW" customClass="DetailsViewController" customModule="Using_Both" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dEl-oX-B16">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="16k-fC-lRw">
+                                <rect key="frame" x="0.0" y="141" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="16k-fC-lRw" secondAttribute="height" multiplier="1:1" id="Jin-f3-nXX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="16k-fC-lRw" firstAttribute="centerY" secondItem="dEl-oX-B16" secondAttribute="centerY" constant="-100" id="gpL-pG-jGE"/>
+                            <constraint firstItem="16k-fC-lRw" firstAttribute="leading" secondItem="f0M-sq-ZNP" secondAttribute="leading" id="k8b-dL-M2X"/>
+                            <constraint firstItem="f0M-sq-ZNP" firstAttribute="trailing" secondItem="16k-fC-lRw" secondAttribute="trailing" id="sWE-kw-qze"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f0M-sq-ZNP"/>
+                    </view>
+                    <connections>
+                        <outlet property="MountainListImageView" destination="16k-fC-lRw" id="yP2-3Q-Iv3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQk-nz-cE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="151.33928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dbF-qS-O30">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RdV-LD-vWi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rtE-ge-ePh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ENx-lQ-gaV" kind="relationship" relationship="rootViewController" id="KkE-zP-Zv5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SSL-4p-txp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107.24637681159422" y="151.33928571428569"/>
+        </scene>
+    </scenes>
+</document>
